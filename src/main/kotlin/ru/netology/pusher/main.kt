@@ -11,7 +11,7 @@ import java.io.FileInputStream
 fun main() {
     val options = FirebaseOptions.builder()
         .setCredentials(GoogleCredentials.fromStream(FileInputStream("fcm.json")))
-     //   .setDatabaseUrl(dbUrl)
+        .setDatabaseUrl(dbUrl)
         .build()
 
     FirebaseApp.initializeApp(options)
@@ -35,7 +35,7 @@ fun main() {
           "postId": 2,
           "newPost": "Если вы знаете английский язык — у вас могут быть хорошие карьерные перспективы."
         }""".trimIndent())
-       // .setToken(token)
+        .setToken(token)
         .build()
 
     FirebaseMessaging.getInstance().send(message)
