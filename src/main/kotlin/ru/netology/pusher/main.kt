@@ -16,13 +16,24 @@ fun main() {
 
     FirebaseApp.initializeApp(options)
 
+//    val message = Message.builder()
+//        .putData("action", "LIKE")
+//        .putData("content", """{
+//          "userId": 1,
+//          "userName": "Vasiliy",
+//          "postId": 2,
+//          "postAuthor": "Netology"
+//        }""".trimIndent())
+//        .setToken(token)
+//        .build()
+
     val message = Message.builder()
-        .putData("action", "LIKE")
+        .putData("action", "POST")
         .putData("content", """{
           "userId": 1,
-          "userName": "Vasiliy",
+          "userName": "Артем",
           "postId": 2,
-          "postAuthor": "Netology"
+          "newPost": "Если вы знаете английский язык — у вас могут быть хорошие карьерные перспективы."
         }""".trimIndent())
         .setToken(token)
         .build()
